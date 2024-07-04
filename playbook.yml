@@ -3,11 +3,11 @@
   hosts: all
   tasks:
     - name: Change to the Laravel directory
-      command: cd /var/www//MyApp/laravel
+      command: cd /var/www/MyApp/laravel
       args:
-        chdir: /var/www//MyApp/laravel
+        chdir: /var/www/MyApp/laravel
 
     - name: Run PHP artisan backup:databases
       command: php artisan backup:databases
       args:
-        chdir: /var/www//MyApp/laravel
+        chdir: /var/www/MyApp/laravel
