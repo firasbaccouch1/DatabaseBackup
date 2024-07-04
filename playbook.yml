@@ -1,0 +1,13 @@
+---
+- name: Backup Laravel Databases
+  hosts: all
+  tasks:
+    - name: Change to the Laravel directory
+      command: cd /MyApp/laravel
+      args:
+        chdir: /MyApp/laravel
+
+    - name: Run PHP artisan backup:databases
+      command: php artisan backup:databases
+      args:
+        chdir: /MyApp/laravel
